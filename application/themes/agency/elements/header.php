@@ -1,6 +1,5 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");
-global $cp;
-$canViewToolbar = (isset($cp) && is_object($cp) && $cp->canViewToolbar());
+$cp = new Permissions($c);
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo Localization::activeLanguage()?>">
@@ -22,7 +21,7 @@ $canViewToolbar = (isset($cp) && is_object($cp) && $cp->canViewToolbar());
     <div class="<?php echo $c->getPageWrapperClass()?>">
         
         <!-- Navigation -->
-        <nav class="navbar navbar-default<?php if ($canViewToolbar) : ?> navbar-fixed-top<?php endif; ?>">
+        <nav class="navbar navbar-default<?php if (!$cp->canViewToolbar()) : ?> navbar-fixed-top<?php endif; ?>">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
