@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<styles version="1.0">
+    <set name="Full Page">
+        <style name="Brand Primary Color" variable="brand-primary" type="color" />
+        <style name="Brand Danger Color" variable="brand-danger" type="color" />
+        <style name="Gray Darkest Color" variable="gray-darkest" type="color" />
+        <style name="Gray Color" variable="gray-normal" type="color" />
+        <style name="Gray Lighter Color" variable="gray-lighter" type="color" />
+        <style name="Placeholder Text Color" variable="placeholder-text" type="color" />
+    </set>
+</styles>
