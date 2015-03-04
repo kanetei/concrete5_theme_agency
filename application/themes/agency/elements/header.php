@@ -1,5 +1,6 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");
 $cp = new Permissions($c);
+$site = Config::get('concrete.site');
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo Localization::activeLanguage()?>">
@@ -31,15 +32,31 @@ $cp = new Permissions($c);
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                    <a class="navbar-brand page-scroll" href="#page-top"><?php echo $site; ?></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <?php
-                    $a = new GlobalArea('Header Navigation');
-                    $a->display();
-                    ?>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#team">Team</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
